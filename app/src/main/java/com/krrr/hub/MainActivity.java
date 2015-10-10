@@ -18,7 +18,7 @@ import android.widget.Toast;
 
 import com.krrr.hub.fragments.HistoryFragment;
 import com.krrr.hub.fragments.SensorsFragment;
-import com.krrr.hub.fragments.AlertsFragment;
+import com.krrr.hub.fragments.RulesFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -85,9 +85,9 @@ public class MainActivity extends AppCompatActivity {
                         faqFragmentTransaction.commit();
                         return true;
                     case R.id.alerts:
-                        AlertsFragment alertsFragment = new AlertsFragment();
+                        RulesFragment rulesFragment = new RulesFragment();
                         FragmentTransaction speakerFragmentTransaction = getSupportFragmentManager().beginTransaction();
-                        speakerFragmentTransaction.replace(R.id.frame, alertsFragment);
+                        speakerFragmentTransaction.replace(R.id.frame, rulesFragment);
                         speakerFragmentTransaction.commit();
                         return true;
                     default:

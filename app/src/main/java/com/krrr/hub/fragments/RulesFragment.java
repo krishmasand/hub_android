@@ -19,15 +19,14 @@ import com.parse.ParseQuery;
 import java.util.List;
 
 import com.krrr.hub.R;
-import com.krrr.hub.adapters.SensorsAdapter;
 
-public class AlertsFragment extends Fragment {
+public class RulesFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.sensors_fragment, container, false);
         final ListView scheduleList = (ListView) v.findViewById(R.id.lstSchedule);
-        ((TextView) v.findViewById(R.id.txtHeader)).setText("Alerts");
+        ((TextView) v.findViewById(R.id.txtHeader)).setText("Rules");
         final Context context = getActivity();
 
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Rules");
@@ -35,7 +34,7 @@ public class AlertsFragment extends Fragment {
             public void done(List<ParseObject> events, ParseException e) {
                 if (e == null) {
                     //Collections.sort(events, new CustomComparator());
-                    AlertsAdapter adapter = new AlertsAdapter(context, R.layout.alerts_item_list, events);
+                    AlertsAdapter adapter = new AlertsAdapter(context, R.layout.rules_item_list, events);
                     scheduleList.setAdapter(adapter);
                 } else {
                     Log.e("Error", e.getMessage());

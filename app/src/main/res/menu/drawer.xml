@@ -13,7 +13,7 @@
             android:id="@+id/alerts"
             android:checked="false"
             android:icon="@drawable/ic_stat_alert_settings"
-            android:title="@string/alerts_string" />
+            android:title="@string/rules_string" />
 
         <item
             android:id="@+id/history"
