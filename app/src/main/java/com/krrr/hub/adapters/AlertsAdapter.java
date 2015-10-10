@@ -56,7 +56,7 @@ public class AlertsAdapter extends ArrayAdapter<ParseObject> {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(event!=null){
-                    event.put("enabled", b);
+                    event.put("is_enabled", b);
                     event.saveInBackground();
                 }
                 Log.d("AlertsAdapter", "" + b);
@@ -65,7 +65,7 @@ public class AlertsAdapter extends ArrayAdapter<ParseObject> {
         if (event != null) {
             try{
                 holder.desc.setText(event.getString("Description"));
-                holder.enabled.setChecked(event.getBoolean("enabled"));
+                holder.enabled.setChecked(event.getBoolean("is_enabled"));
             }
             catch(NullPointerException e){
             }
