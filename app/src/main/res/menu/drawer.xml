@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/sensors"
+            android:checked="false"
+            android:icon="@drawable/ic_stat_sensor"
+            android:title="@string/sensors_string" />
+
+        <item
+            android:id="@+id/alerts"
+            android:checked="false"
+            android:icon="@drawable/ic_stat_alert_settings"
+            android:title="@string/alerts_string" />
+
+        <item
+            android:id="@+id/history"
+            android:checked="false"
+            android:icon="@drawable/ic_stat_history"
+            android:title="@string/history_string" />
+
+    </group>
+</menu>
